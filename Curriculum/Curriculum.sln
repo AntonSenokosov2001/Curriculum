@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curriculum.Domain", "Curriculum.Domain\Curriculum.Domain.csproj", "{B4E961AA-6ED1-4982-8F9A-85B0B491A520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curriculum.WinUI", "Curriculum.WinUI\Curriculum.WinUI.csproj", "{157BAAC5-5A80-440D-A915-017DF21D6441}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4E961AA-6ED1-4982-8F9A-85B0B491A520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E961AA-6ED1-4982-8F9A-85B0B491A520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E961AA-6ED1-4982-8F9A-85B0B491A520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E961AA-6ED1-4982-8F9A-85B0B491A520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157BAAC5-5A80-440D-A915-017DF21D6441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157BAAC5-5A80-440D-A915-017DF21D6441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157BAAC5-5A80-440D-A915-017DF21D6441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157BAAC5-5A80-440D-A915-017DF21D6441}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
