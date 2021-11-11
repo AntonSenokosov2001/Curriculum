@@ -7,7 +7,7 @@ using Curriculum.Domain.Entities;
 
 namespace Curriculum.Domain.Abstract
 {
-    public class IBachelorFourYear
+    public interface IBachelorFourYear
     {
         public IEnumerable<BachelorFourYear> BachelorFourYears { get; }
     }

@@ -9,6 +9,6 @@ namespace Curriculum.Domain.Abstract
 {
     public interface IMasterOneYear
     {
-        public IEnumerable<IMasterOneYear> MasterOneYears { get; }
+        public IEnumerable<MasterOneYear> MasterOneYears { get; }
     }
 }
