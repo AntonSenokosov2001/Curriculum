@@ -16,5 +16,29 @@ namespace Curriculum.WinUI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BachelorFour bachelorFour = new BachelorFour();
+            bachelorFour.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BachelorThree bachelorThree = new BachelorThree();
+            bachelorThree.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MasterOne masterOne = new MasterOne();
+            masterOne.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MasterTwo masterTwo = new MasterTwo();
+            masterTwo.Show();
+        }
     }
 }

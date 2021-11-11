@@ -54,6 +54,7 @@ namespace Curriculum.WinUI
             this.button1.TabIndex = 1;
             this.button1.Text = "Бакалаври (4 роки)";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -63,6 +64,7 @@ namespace Curriculum.WinUI
             this.button2.TabIndex = 2;
             this.button2.Text = "Бакалаври (3 роки)";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -72,6 +74,7 @@ namespace Curriculum.WinUI
             this.button3.TabIndex = 3;
             this.button3.Text = "Магістри (1 рік 4 місяці)";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -81,6 +84,7 @@ namespace Curriculum.WinUI
             this.button4.TabIndex = 4;
             this.button4.Text = "Магістри (1 рік 9 місяців)";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainForm
             // 
