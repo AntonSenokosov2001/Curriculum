@@ -11,7 +11,7 @@ namespace Curriculum.Domain.Entities
         public int ID { get; set; }
         public Semester Semester { get; }
         public Cycle Cycle { get; }
-        public Subject Subject { get; }
+        public SubjectMaster SubjectMaster { get; }
         public Department Department { get; }
         public bool Exam { get; set; }
         public bool DiffOffset { get; set; }

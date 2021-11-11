@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Curriculum.Domain.Abstract
 {
-    public interface ISubject
+    public interface ISubjectBachelor
     {
-        public IEnumerable<Subject> Subjects { get; }
+        public IEnumerable<SubjectBachelor> SubjectBachelors { get; }
     }
 }

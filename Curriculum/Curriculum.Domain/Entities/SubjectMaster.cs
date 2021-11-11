@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Curriculum.Domain.Entities
 {
-    public class Subject
+    public class SubjectMaster
     {
         public int ID { get; set; }
         public string NameSubject { get; set; }
