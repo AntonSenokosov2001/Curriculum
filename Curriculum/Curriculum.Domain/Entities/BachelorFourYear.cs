@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Curriculum.Domain.Entities
 {
-    public class RowSubject
+    public class BachelorFourYear
     {
         public int ID { get; set; }
         public Semester Semester { get; }
