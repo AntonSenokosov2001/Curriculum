@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Curriculum.Domain.Entities
 {
-    public class Department
+    public class UserAutorization
     {
         public int ID { get; set; }
-        public int NumberDepartment { get; set; }
-        public string NameDepartment { get; set; }
+        public int Login { get; set; }
+        public int Password { get; set; }
     }
 }
