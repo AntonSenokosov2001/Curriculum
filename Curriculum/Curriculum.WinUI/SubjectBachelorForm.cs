@@ -28,5 +28,24 @@ namespace Curriculum.WinUI
                 dataGridView1.Rows.Add(subjectBachelor.ID, subjectBachelor.NameSubject);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DirectoryForm directoryForm = new DirectoryForm();
+            directoryForm.Show();
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

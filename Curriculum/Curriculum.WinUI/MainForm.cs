@@ -40,5 +40,17 @@ namespace Curriculum.WinUI
             MasterTwo masterTwo = new MasterTwo();
             masterTwo.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DirectoryForm directoryForm = new DirectoryForm();
+            directoryForm.Show();
+            this.Close();
+        }
     }
 }
