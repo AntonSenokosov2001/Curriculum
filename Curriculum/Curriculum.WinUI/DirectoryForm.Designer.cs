@@ -41,7 +41,7 @@ namespace Curriculum.WinUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(55, 128);
+            this.button1.Location = new System.Drawing.Point(317, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 81);
             this.button1.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace Curriculum.WinUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(55, 255);
+            this.button2.Location = new System.Drawing.Point(112, 261);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 81);
             this.button2.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace Curriculum.WinUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(588, 128);
+            this.button3.Location = new System.Drawing.Point(112, 134);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 81);
             this.button3.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Curriculum.WinUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(220, 46);
+            this.label1.Location = new System.Drawing.Point(245, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(322, 27);
             this.label1.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace Curriculum.WinUI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(319, 255);
+            this.button4.Location = new System.Drawing.Point(522, 261);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 81);
             this.button4.TabIndex = 4;
@@ -91,7 +91,7 @@ namespace Curriculum.WinUI
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(319, 128);
+            this.button5.Location = new System.Drawing.Point(522, 134);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 81);
             this.button5.TabIndex = 5;
@@ -134,6 +134,7 @@ namespace Curriculum.WinUI
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DirectoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DirectoryForm";
             this.ResumeLayout(false);
             this.PerformLayout();

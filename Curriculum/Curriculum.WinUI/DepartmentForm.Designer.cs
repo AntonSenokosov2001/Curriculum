@@ -29,7 +29,7 @@ namespace Curriculum.WinUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartmentNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +66,8 @@ namespace Curriculum.WinUI
             // 
             // DepartmentNumber
             // 
-            dataGridViewCellStyle8.NullValue = null;
-            this.DepartmentNumber.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.NullValue = null;
+            this.DepartmentNumber.DefaultCellStyle = dataGridViewCellStyle1;
             this.DepartmentNumber.HeaderText = "Номер кафедри";
             this.DepartmentNumber.MinimumWidth = 6;
             this.DepartmentNumber.Name = "DepartmentNumber";
@@ -83,30 +83,33 @@ namespace Curriculum.WinUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(875, 163);
+            this.button1.Location = new System.Drawing.Point(841, 163);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 50);
+            this.button1.Size = new System.Drawing.Size(190, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "Додати нову кафедру";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(875, 243);
+            this.button2.Location = new System.Drawing.Point(841, 247);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 74);
+            this.button2.Size = new System.Drawing.Size(190, 57);
             this.button2.TabIndex = 2;
             this.button2.Text = "Редагувати інформацію про кафедру";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(875, 339);
+            this.button3.Location = new System.Drawing.Point(841, 329);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 72);
+            this.button3.Size = new System.Drawing.Size(190, 57);
             this.button3.TabIndex = 3;
             this.button3.Text = "Видалити інформацію про кафедру";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button7
             // 
@@ -120,9 +123,9 @@ namespace Curriculum.WinUI
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 12);
+            this.button6.Location = new System.Drawing.Point(12, 32);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 51);
+            this.button6.Size = new System.Drawing.Size(162, 33);
             this.button6.TabIndex = 9;
             this.button6.Text = "Головне меню";
             this.button6.UseVisualStyleBackColor = true;
@@ -130,9 +133,9 @@ namespace Curriculum.WinUI
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(159, 10);
+            this.button5.Location = new System.Drawing.Point(180, 32);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 36);
+            this.button5.Size = new System.Drawing.Size(120, 33);
             this.button5.TabIndex = 10;
             this.button5.Text = "Довідник";
             this.button5.UseVisualStyleBackColor = true;

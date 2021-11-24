@@ -70,7 +70,7 @@ namespace Curriculum.WinUI
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(557, 12);
+            this.button7.Location = new System.Drawing.Point(530, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(46, 33);
             this.button7.TabIndex = 8;
@@ -80,36 +80,38 @@ namespace Curriculum.WinUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 70);
+            this.button1.Location = new System.Drawing.Point(359, 87);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 51);
+            this.button1.Size = new System.Drawing.Size(190, 57);
             this.button1.TabIndex = 9;
             this.button1.Text = "Додати новий семестр";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(404, 142);
+            this.button2.Location = new System.Drawing.Point(359, 153);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 70);
+            this.button2.Size = new System.Drawing.Size(190, 57);
             this.button2.TabIndex = 10;
             this.button2.Text = "Редагувати інформацію про семестр";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(404, 231);
+            this.button3.Location = new System.Drawing.Point(359, 219);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 70);
+            this.button3.Size = new System.Drawing.Size(190, 57);
             this.button3.TabIndex = 11;
             this.button3.Text = "Видалити інформацію про семестр";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 12);
+            this.button6.Location = new System.Drawing.Point(27, 29);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 51);
+            this.button6.Size = new System.Drawing.Size(162, 33);
             this.button6.TabIndex = 12;
             this.button6.Text = "Головне меню";
             this.button6.UseVisualStyleBackColor = true;
@@ -117,11 +119,11 @@ namespace Curriculum.WinUI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(153, 12);
+            this.button4.Location = new System.Drawing.Point(197, 29);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 51);
+            this.button4.Size = new System.Drawing.Size(133, 33);
             this.button4.TabIndex = 13;
-            this.button4.Text = "Довідка";
+            this.button4.Text = "Довідник";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -129,7 +131,7 @@ namespace Curriculum.WinUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 340);
+            this.ClientSize = new System.Drawing.Size(589, 340);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);

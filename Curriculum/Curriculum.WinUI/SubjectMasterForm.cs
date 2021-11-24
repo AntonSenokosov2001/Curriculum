@@ -41,12 +41,24 @@ namespace Curriculum.WinUI
         {
             DirectoryForm directoryForm = new DirectoryForm();
             directoryForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSubjectM AsubjectForm = new AddSubjectM();
+            AsubjectForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditSubjectM EsubjectForm = new EditSubjectM();
+            EsubjectForm.ShowDialog();
         }
     }
 }

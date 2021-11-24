@@ -70,9 +70,9 @@ namespace Curriculum.WinUI
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 12);
+            this.button6.Location = new System.Drawing.Point(10, 37);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 51);
+            this.button6.Size = new System.Drawing.Size(162, 33);
             this.button6.TabIndex = 7;
             this.button6.Text = "Головне меню";
             this.button6.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@ namespace Curriculum.WinUI
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(145, 19);
+            this.button5.Location = new System.Drawing.Point(187, 37);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 36);
+            this.button5.Size = new System.Drawing.Size(120, 33);
             this.button5.TabIndex = 8;
             this.button5.Text = "Довідник";
             this.button5.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@ namespace Curriculum.WinUI
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(841, 12);
+            this.button7.Location = new System.Drawing.Point(851, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(46, 33);
             this.button7.TabIndex = 9;
@@ -100,27 +100,29 @@ namespace Curriculum.WinUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(743, 119);
+            this.button1.Location = new System.Drawing.Point(707, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 51);
+            this.button1.Size = new System.Drawing.Size(190, 57);
             this.button1.TabIndex = 10;
             this.button1.Text = "Додати новий предмет";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(743, 190);
+            this.button2.Location = new System.Drawing.Point(707, 201);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 74);
+            this.button2.Size = new System.Drawing.Size(190, 57);
             this.button2.TabIndex = 11;
             this.button2.Text = "Редагувати інформацію про предмет";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(743, 282);
+            this.button3.Location = new System.Drawing.Point(707, 279);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 74);
+            this.button3.Size = new System.Drawing.Size(190, 57);
             this.button3.TabIndex = 12;
             this.button3.Text = "Видалити інформацію про предмет";
             this.button3.UseVisualStyleBackColor = true;
@@ -129,7 +131,7 @@ namespace Curriculum.WinUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 450);
+            this.ClientSize = new System.Drawing.Size(915, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

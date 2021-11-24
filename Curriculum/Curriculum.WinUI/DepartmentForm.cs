@@ -29,28 +29,40 @@ namespace Curriculum.WinUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             DirectoryForm directoryForm = new DirectoryForm();
             directoryForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddDepartment departmentForm = new AddDepartment();
+            departmentForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditDepartment departmentForm = new EditDepartment(603,"Інженерія програмного забезпечення"); //Сюдой впихнуть номер и название выделенной строки с DataGrid'а
+            departmentForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

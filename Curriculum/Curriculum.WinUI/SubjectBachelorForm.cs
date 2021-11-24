@@ -47,5 +47,17 @@ namespace Curriculum.WinUI
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSubjectB AsubjectForm = new AddSubjectB();
+            AsubjectForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditSubjectB EsubjectForm = new EditSubjectB();
+            EsubjectForm.ShowDialog();
+        }
     }
 }

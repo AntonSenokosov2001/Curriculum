@@ -50,7 +50,7 @@ namespace Curriculum.WinUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(81, 127);
+            this.button1.Location = new System.Drawing.Point(123, 126);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 71);
             this.button1.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Curriculum.WinUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(479, 127);
+            this.button2.Location = new System.Drawing.Point(521, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 71);
             this.button2.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace Curriculum.WinUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(81, 234);
+            this.button3.Location = new System.Drawing.Point(123, 233);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 71);
             this.button3.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace Curriculum.WinUI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(479, 234);
+            this.button4.Location = new System.Drawing.Point(521, 233);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 71);
             this.button4.TabIndex = 4;
@@ -122,6 +122,7 @@ namespace Curriculum.WinUI
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -47,5 +47,17 @@ namespace Curriculum.WinUI
             directoryForm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSemester AsemesterForm = new AddSemester();
+            AsemesterForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditSemester EsemesterForm = new EditSemester();
+            EsemesterForm.ShowDialog();
+        }
     }
 }
