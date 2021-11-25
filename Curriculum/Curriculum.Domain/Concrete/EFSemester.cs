@@ -10,13 +10,37 @@ namespace Curriculum.Domain.Concrete
 {
     public class EFSemester : ISemester
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+
+        public EFSemester()
+        {
+            _dbContext = new EFDbContext();
+        }
+
         public IEnumerable<Semester> Semesters
         {
             get
             {
-                return dbContext.Semesters;
+                return _dbContext.Semesters;
             }
+        }
+
+        public Semester DeleteSemester(int semesterId)
+        {
+            Semester semester = _dbContext.Semesters.Find(semesterId);
+
+            if (semester != null)
+            {
+                _dbContext.Semesters.Remove(semester);
+                _dbContext.SaveChanges();
+            }
+
+            return semester;
+        }
+
+        public void SaveSemester(Semester semester)
+        {
+            throw new NotImplementedException();
         }
     }
 }

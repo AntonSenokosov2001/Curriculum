@@ -10,13 +10,52 @@ namespace Curriculum.Domain.Concrete
 {
     public class EFDepartment : IDepartment
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+
+        public EFDepartment()
+        {
+            _dbContext = new EFDbContext();
+        }
+
         public IEnumerable<Department> Departments
         {
             get
             {
-                return dbContext.Departments;
+                return _dbContext.Departments;
             }
+        }
+
+        public Department DeleteDepartment(int departmentId)
+        {
+            Department department = _dbContext.Departments.Find(departmentId);
+
+            if (department != null)
+            {
+                _dbContext.Departments.Remove(department);
+                _dbContext.SaveChanges();
+            }
+
+            return department;
+        }
+
+        public void SaveDepartment(Department department)
+        {
+            if (department.ID == 0)
+            {
+                _dbContext.Departments.Add(department);
+            }
+            else
+            {
+                Department departments = _dbContext.Departments.Find(department.ID);
+
+                if (departments != null)
+                {
+                    departments.NameDepartment = department.NameDepartment;
+                    departments.NumberDepartment = department.NumberDepartment;
+                }
+            }
+
+            _dbContext.SaveChanges();
         }
     }
 }

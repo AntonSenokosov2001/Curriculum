@@ -54,6 +54,7 @@ namespace Curriculum.WinUI
             this.AddButton.TabIndex = 18;
             this.AddButton.Text = "Внести зміни";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NewSubjectName
             // 

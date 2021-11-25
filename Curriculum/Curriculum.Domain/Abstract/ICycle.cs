@@ -10,5 +10,7 @@ namespace Curriculum.Domain.Abstract
     public interface ICycle
     {
         public IEnumerable<Cycle> Cycles { get; }
+        void SaveCycle(Cycle cycle);
+        Cycle DeleteCycle(int cycleID);
     }
 }

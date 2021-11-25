@@ -10,5 +10,7 @@ namespace Curriculum.Domain.Abstract
     public interface ISemester
     {
         public IEnumerable<Semester> Semesters { get; }
+        void SaveSemester(Semester semester);
+        Semester DeleteSemester(int semesterId);
     }
 }

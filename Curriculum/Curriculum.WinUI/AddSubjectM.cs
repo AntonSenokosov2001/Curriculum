@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Curriculum.Domain.Entities;
+using Curriculum.Domain.Concrete;
 
 namespace Curriculum.WinUI
 {
     public partial class AddSubjectM : Form
     {
+        private readonly EFDbContext _dbContext;
         public AddSubjectM()
         {
             InitializeComponent();
+            _dbContext = new EFDbContext();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
