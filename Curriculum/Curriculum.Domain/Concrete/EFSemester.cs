@@ -40,7 +40,21 @@ namespace Curriculum.Domain.Concrete
 
         public void SaveSemester(Semester semester)
         {
-            throw new NotImplementedException();
+            if (semester.ID == 0)
+            {
+                _dbContext.Semesters.Add(semester);
+            }
+            else
+            {
+                Semester sem = _dbContext.Semesters.Find(semester.ID);
+
+                if (sem != null)
+                {
+                    sem.NumberSemester = semester.NumberSemester;
+                }
+            }
+
+            _dbContext.SaveChanges();
         }
     }
 }

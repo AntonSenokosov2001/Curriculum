@@ -1,8 +1,12 @@
+using iRely.Common;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Curriculum.Domain.Abstract;
+using Curriculum.Domain.Concrete;
 
 namespace Curriculum.WinUI
 {
@@ -17,7 +21,7 @@ namespace Curriculum.WinUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new CycleForm());
         }
     }
 }

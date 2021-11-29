@@ -9,21 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Curriculum.Domain.Entities;
 using Curriculum.Domain.Concrete;
+using Curriculum.Domain.Abstract;
 
 namespace Curriculum.WinUI
 {
     public partial class CycleForm : Form
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+        private readonly EFCycle _eFCycle;
+
         public CycleForm()
         {
             InitializeComponent();
+            _dbContext = new EFDbContext();
+            _eFCycle = new EFCycle();
             LoadData();
         }
 
         public void LoadData()
         {
-            foreach(Cycle cycle in dbContext.Cycles)
+            foreach(Cycle cycle in _dbContext.Cycles)
             {
                 dataGridView1.Rows.Add(cycle.ID, cycle.NumberCycle);
             }
@@ -50,14 +55,26 @@ namespace Curriculum.WinUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddCycle AcycleForm = new AddCycle();
-            AcycleForm.ShowDialog();
+            var AcycleForm = new AddCycle();
+            AcycleForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditCycle EcycleForm = new EditCycle();
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            
+            var EcycleForm = new EditCycle(idCycle);
             EcycleForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            dataGridView1.Rows.RemoveAt(index);
+
+            _eFCycle.DeleteCycle(idCycle);
         }
     }
 }

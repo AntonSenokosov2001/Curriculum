@@ -7,19 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Curriculum.Domain.Concrete;
+using Curriculum.Domain.Entities;
 
 namespace Curriculum.WinUI
 {
     public partial class EditCycle : Form
     {
-        public EditCycle()
+        private int Id;
+        private readonly EFCycle _eFCycle;
+        public EditCycle(int id)
         {
             InitializeComponent();
+            Id = id;
+            _eFCycle = new EFCycle();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            var cycle = new Cycle { ID = Id, NumberCycle = NumCycle.Text };
 
+            _eFCycle.SaveCycle(cycle);
         }
 
         private void NumCycle_TextChanged(object sender, EventArgs e)
