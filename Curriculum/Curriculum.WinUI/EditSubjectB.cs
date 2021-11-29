@@ -14,19 +14,21 @@ namespace Curriculum.WinUI
 {
     public partial class EditSubjectB : Form
     {
-        private readonly EFSemester _semester;
+        private readonly EFSubjectBachelor _subjectBachelor;
         private int _Id;
-        public EditSubjectB(int id, int numSemester)
+        public EditSubjectB(int id, string numSemester)
         {
             InitializeComponent();
-            _semester = new EFSemester();
+            _subjectBachelor = new EFSubjectBachelor();
             _Id = id;
-            NewSubjectName.Text = numSemester.ToString();
+            NewSubjectName.Text = numSemester;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            
+            var subject = new SubjectBachelor { ID = _Id, NameSubject = NewSubjectName.Text };
+
+            _subjectBachelor.SaveSubjectBachelor(subject);
         }
     }
 }

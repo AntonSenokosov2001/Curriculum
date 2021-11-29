@@ -7,19 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Curriculum.Domain.Entities;
+using Curriculum.Domain.Concrete;
 
 namespace Curriculum.WinUI
 {
     public partial class AddSubjectB : Form
     {
+        private readonly EFSubjectBachelor _subjectBachelor;
         public AddSubjectB()
         {
             InitializeComponent();
+            _subjectBachelor = new EFSubjectBachelor();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            var subject = new SubjectBachelor { NameSubject = SubjectName.Text };
 
+            _subjectBachelor.SaveSubjectBachelor(subject);
         }
     }
 }

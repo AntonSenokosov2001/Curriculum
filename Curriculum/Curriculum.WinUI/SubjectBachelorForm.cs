@@ -14,16 +14,19 @@ namespace Curriculum.WinUI
 {
     public partial class SubjectBachelorForm : Form
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+        private readonly EFSubjectBachelor _subjectBachelor;
         public SubjectBachelorForm()
         {
             InitializeComponent();
+            _dbContext = new EFDbContext();
+            _subjectBachelor = new EFSubjectBachelor();
             LoadData();
         }
 
         public void LoadData()
         {
-            foreach(SubjectBachelor subjectBachelor in dbContext.SubjectBachelors)
+            foreach(var subjectBachelor in _dbContext.SubjectBachelors)
             {
                 dataGridView1.Rows.Add(subjectBachelor.ID, subjectBachelor.NameSubject);
             }
@@ -31,14 +34,14 @@ namespace Curriculum.WinUI
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
+            var mainForm = new MainForm();
             mainForm.Show();
             this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DirectoryForm directoryForm = new DirectoryForm();
+            var directoryForm = new DirectoryForm();
             directoryForm.Show();
             this.Close();
         }
@@ -50,14 +53,27 @@ namespace Curriculum.WinUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddSubjectB AsubjectForm = new AddSubjectB();
+            var AsubjectForm = new AddSubjectB();
             AsubjectForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditSubjectB EsubjectForm = new EditSubjectB();
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            var numCycle = dataGridView1.Rows[index].Cells["NameSubject"].Value.ToString();
+
+            var EsubjectForm = new EditSubjectB(idCycle, numCycle);
             EsubjectForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            dataGridView1.Rows.RemoveAt(index);
+
+            _subjectBachelor.DeleteSubjectBachelor(idCycle);
         }
     }
 }
