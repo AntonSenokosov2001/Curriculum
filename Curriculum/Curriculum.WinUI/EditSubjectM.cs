@@ -14,17 +14,21 @@ namespace Curriculum.WinUI
 {
     public partial class EditSubjectM : Form
     {
-        private readonly EFDbContext _dbContext;
-        public EditSubjectM()
+        private readonly EFSubjectMaster _subjectMaster;
+        private int _Id;
+        public EditSubjectM(int id, string subject)
         {
             InitializeComponent();
-            _dbContext = new EFDbContext();
+            _subjectMaster = new EFSubjectMaster();
+            _Id = id;
+            NewSubjectName.Text = subject;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            int subjectID = 0;
-            SubjectMaster subjectMaster = _dbContext.SubjectMasters.FirstOrDefault(s => s.ID == subjectID);
+            var subject = new SubjectMaster { ID = _Id, NameSubject = NewSubjectName.Text };
+
+            _subjectMaster.SaveSubject(subject);
         }
     }
 }
