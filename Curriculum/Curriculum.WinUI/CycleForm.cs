@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Curriculum.Domain.Entities;
 using Curriculum.Domain.Concrete;
-using Curriculum.Domain.Abstract;
 
 namespace Curriculum.WinUI
 {

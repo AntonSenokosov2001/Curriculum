@@ -14,16 +14,19 @@ namespace Curriculum.WinUI
 {
     public partial class SemesterForm : Form
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+        private readonly EFSemester _semester;
         public SemesterForm()
         {
             InitializeComponent();
+            _dbContext = new EFDbContext();
+            _semester = new EFSemester();
             LoadData();
         }
 
         public void LoadData()
         {
-            foreach(Semester semester in dbContext.Semesters)
+            foreach(Semester semester in _dbContext.Semesters)
             {
                 dataGridView1.Rows.Add(semester.ID, semester.NumberSemester);
             }
@@ -50,14 +53,27 @@ namespace Curriculum.WinUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddSemester AsemesterForm = new AddSemester();
-            AsemesterForm.ShowDialog();
+            var semesterForm = new AddSemester();
+            semesterForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditSemester EsemesterForm = new EditSemester();
-            EsemesterForm.ShowDialog();
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idSemester = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            var numSemester = (int)dataGridView1.Rows[index].Cells["NumberSemester"].Value;
+
+            var semesterForm = new EditSemester(idSemester, numSemester);
+            semesterForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
+            dataGridView1.Rows.RemoveAt(index);
+
+            _semester.DeleteSemester(idCycle);
         }
     }
 }
