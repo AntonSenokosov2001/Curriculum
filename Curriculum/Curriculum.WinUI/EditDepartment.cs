@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using Curriculum.Domain.Concrete;
+using Curriculum.Domain.Entities;
 
 namespace Curriculum.WinUI
 {
     public partial class EditDepartment : Form
     {
-        public EditDepartment(int num, string name)
+        private int Id;
+        private readonly EFDepartment department;
+        public EditDepartment(int id, int num, string name)
         {
             InitializeComponent();
             this.Text += " " + num;
+            Id = id;
             NewNumDep.Text = num.ToString();
             NewNameDep.Text = name;
+            department = new EFDepartment();
         }
 
         private void NewNumDep_TextChanged(object sender, EventArgs e)
@@ -46,7 +52,16 @@ namespace Curriculum.WinUI
         {
             try
             {
+                if (NewNameDep.Text == "")
+                {
+                    throw new Exception();
+                }
+                else
+                {
+                    var departm = new Department { ID = Id, NameDepartment = NewNameDep.Text, NumberDepartment = int.Parse(NewNumDep.Text) };
 
+                    department.SaveDepartment(departm);
+                }
             }
             catch
             {

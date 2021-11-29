@@ -14,16 +14,20 @@ namespace Curriculum.WinUI
 {
     public partial class DepartmentForm : Form
     {
-        EFDbContext dbContext = new EFDbContext();
+        private readonly EFDbContext _dbContext;
+        private readonly EFDepartment _eFDepartment;
+
         public DepartmentForm()
         {
             InitializeComponent();
+            _dbContext = new EFDbContext();
+            _eFDepartment = new EFDepartment();
             LoadData();
         }
 
         public void LoadData()
         {   
-            foreach (Department department in dbContext.Departments)
+            foreach (Department department in _dbContext.Departments)
             {
                 dataGridView1.Rows.Add(department.ID, department.NumberDepartment, department.NameDepartment);
             }
@@ -56,13 +60,22 @@ namespace Curriculum.WinUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EditDepartment departmentForm = new EditDepartment(603,"Інженерія програмного забезпечення"); //Сюдой впихнуть номер и название выделенной строки с DataGrid'а
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idDepartment = (int)dataGridView1.Rows[index].Cells["DepartmentID"].Value;
+            var nameDepartment = dataGridView1.Rows[index].Cells["DepartmentName"].Value.ToString();
+            var numberDepartment = (int)dataGridView1.Rows[index].Cells["DepartmentNumber"].Value;
+
+            var departmentForm = new EditDepartment(idDepartment, numberDepartment, nameDepartment);
             departmentForm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            var index = dataGridView1.CurrentCell.RowIndex;
+            var idDepartment = (int)dataGridView1.Rows[index].Cells["DepartmentID"].Value;
+            dataGridView1.Rows.RemoveAt(index);
 
+            _eFDepartment.DeleteDepartment(idDepartment);
         }
     }
 }

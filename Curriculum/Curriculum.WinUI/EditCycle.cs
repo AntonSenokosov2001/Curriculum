@@ -16,11 +16,12 @@ namespace Curriculum.WinUI
     {
         private int Id;
         private readonly EFCycle _eFCycle;
-        public EditCycle(int id)
+        public EditCycle(int id, string num)
         {
             InitializeComponent();
             Id = id;
             _eFCycle = new EFCycle();
+            NumCycle.Text = num.ToString();
         }
 
         private void AddButton_Click(object sender, EventArgs e)

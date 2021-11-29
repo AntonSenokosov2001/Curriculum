@@ -63,8 +63,8 @@ namespace Curriculum.WinUI
         {
             var index = dataGridView1.CurrentCell.RowIndex;
             var idCycle = (int)dataGridView1.Rows[index].Cells["ID"].Value;
-            
-            var EcycleForm = new EditCycle(idCycle);
+            var numCycle = dataGridView1.Rows[index].Cells["NumberCycle"].Value.ToString();
+            var EcycleForm = new EditCycle(idCycle, numCycle);
             EcycleForm.ShowDialog();
         }
 
