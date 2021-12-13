@@ -92,7 +92,7 @@ namespace Curriculum.WinUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1406, 460);
+            this.dataGridView1.Size = new System.Drawing.Size(1414, 460);
             this.dataGridView1.TabIndex = 2;
             // 
             // Column1
@@ -275,7 +275,7 @@ namespace Curriculum.WinUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 512);
+            this.ClientSize = new System.Drawing.Size(1579, 524);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BachelorFour";
             this.Text = "BachelorFour";

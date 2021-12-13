@@ -21,7 +21,7 @@ namespace Curriculum.WinUI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CycleForm());
+            Application.Run(new MainForm());
         }
     }
 }

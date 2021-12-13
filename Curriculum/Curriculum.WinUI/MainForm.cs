@@ -52,11 +52,5 @@ namespace Curriculum.WinUI
             directoryForm.Show();
             this.Hide();
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            EditSemester dep = new EditSemester();
-            dep.ShowDialog();
-        }
     }
 }
