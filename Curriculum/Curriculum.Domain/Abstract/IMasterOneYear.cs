@@ -10,5 +10,8 @@ namespace Curriculum.Domain.Abstract
     public interface IMasterOneYear
     {
         public IEnumerable<MasterOneYear> MasterOneYears { get; }
+
+        void SaveMaster(MasterOneYear master);
+        MasterOneYear DeleteMaster(int masterID);
     }
 }
