@@ -10,5 +10,7 @@ namespace Curriculum.Domain.Abstract
     public interface IBachelorThreeYear
     {
         public IEnumerable<BachelorThreeYear> BachelorThreeYears { get; }
+        void SaveBachelor(BachelorThreeYear bachelor);
+        BachelorThreeYear DeleteBachelor(int bachelorId);
     }
 }

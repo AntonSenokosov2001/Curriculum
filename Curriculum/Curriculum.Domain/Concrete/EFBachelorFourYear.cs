@@ -27,7 +27,15 @@ namespace Curriculum.Domain.Concrete
 
         public BachelorFourYear DeleteBachelor(int bachelorId)
         {
-            throw new NotImplementedException();
+            BachelorFourYear bachelorFour = _dbContext.BachelorFourYears.Find(bachelorId);
+
+            if (bachelorFour != null)
+            {
+                _dbContext.BachelorFourYears.Remove(bachelorFour);
+                _dbContext.SaveChanges();
+            }
+
+            return bachelorFour;
         }
 
         public void SaveBachelor(BachelorFourYear bachelor)
